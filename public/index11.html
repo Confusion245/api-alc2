@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rest Api - Alcatraz</title>
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/owl-carousel-2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/nR4tkYJ/logo1.png"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/nR4tkYJ/logo1.png"><link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+    <script src="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+   <meta name="description" content="Alcatraz - APIs">
+   <meta property="og:image" content="https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg">
+   <meta property="og:site_name" content="AlcApi">
+   <meta name="keywords" content="REST API">
+   <meta name="author" content="ConfuMods">
+  </head>
+  <body>
+  <body id="page-top" onload="getvisitor();">
+    <div class="container-scroller">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+          <a class="sidebar-brand brand-logo rounded-circle" href="#"><img src="images/logo1.png" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="#"><img src="images/logo1.png" class="rounded-circle" alt="logo" /></a>
+        </div>
+       <font face="Original Surfer">
+        <ul class="nav">
+          <li class="nav-item profile">
+            <div class="profile-desc">
+              <div class="profile-pic">
+                <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div>
+                <div class="profile-name">
+                  <h5 class="mb-0 font-weight-normal">ConfuMods</h5>
+                  <span>Soy un principiante aun :(</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Docs</span>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" href="#">
+          <span class="menu-icon">
+          <i class="mdi mdi-home"></i>
+          </span>
+          <span class="menu-title">Home</span>
+          </a>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-cecan" aria-expanded="false" aria-controls="ui-img-maker">
+          <span class="menu-icon">
+          <i class="mdi mdi-folder-multiple-image"></i>
+          </span>
+          <span class="menu-title">Chicas</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-cecan">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/ari?&apikey=ConfuMods">Ari-Gameplays</a></li>          
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/say_cat?&apikey=ConfuMods">SayCat</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/random-girls?&apikey=ConfuMods">Random-Girls</a></li>                    
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/badgirl?&apikey=ConfuMods">Badgirl</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/brasil?&apikey=ConfuMods">Brasil</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/muslos?&apikey=ConfuMods">Muslos</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/china?apikey=ConfuMods">China</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/vietnam?apikey=ConfuMods">Vietnam</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/thailand?apikey=ConfuMods">Thailandia</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/indonesia?apikey=ConfuMods">Indonesia</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/korea?apikey=ConfuMods">Corea</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/japan?apikey=ConfuMods">Japon</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/chicas/malaysia?apikey=ConfuMods">Malaysia</a></li>
+          </ul>
+          </div>
+          </li> 
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-downloader" aria-expanded="false" aria-controls="ui-downloader">
+          <span class="menu-icon">
+          <i class="mdi mdi-download"></i>
+          </span>
+          <span class="menu-title">Descargas</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-downloader">
+          <ul class="nav flex-column sub-menu">
+         <li class="nav-item"> <a class="nav-link"href="api/download/mediafire?url=https://www.mediafire.com/file/gzkexv7fauoi9yq/AlcBot.zip/file&apikey=ConfuMods">Mediafire</a></li>
+         <li class="nav-item"> <a class="nav-link"href="api/download/telesticker?url=https://t.me/addstickers/LINE_Menhera_chan_ENG&apikey=ConfuMods">Telesticker</a></li>
+         <li class="nav-item"> <a class="nav-link"href="api/download/tiktok?url=https://vm.tiktok.com/ZM8wMe4y2/&apikey=ConfuMods">Tiktok</a></li>
+         <li class="nav-item"> <a class="nav-link"href="api/download/facebook?url=URL&apikey=ConfuMods">Facebook</a></li>
+         <li class="nav-item"> <a class="nav-link"href="api/download/instagram?apikey=ConfuMods&url=https://www.instagram.com/p/CVl3U2Sv1Yv/?utm_medium=copy_link">Instagram</a></li>
+         <li class="nav-item"> <a class="nav-link"href="api/download/pinterest?q=loli&apikey=ConfuMods">Pinterest</a></li>
+         <li class="nav-item"> <a class="nav-link"href="api/download/ytmp4?url=https://youtu.be/5GJWxDKyk3A&apikey=ConfuMods">Video de YouTube</a></li>          
+         <li class="nav-item"> <a class="nav-link"href="api/download/play?query=Happier than ever&apikey=ConfuMods">Play MP3</a></li>          
+         <li class="nav-item"> <a class="nav-link"href="api/download/say_cat?apikey=ConfuMods">SayCat VD</a></li>          
+          </ul>
+          </div>
+          </li>
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-edit" aria-expanded="false" aria-controls="ui-edit">
+          <span class="menu-icon">
+          <i class="mdi mdi-folder-image"></i>
+          </span>
+          <span class="menu-title">Edit Img</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-edit">
+          <ul class="nav flex-column sub-menu">   
+          <li class="nav-item"> <a class="nav-link" href="api/edit/gay?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Gay</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/glass?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Glass</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/green?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Green</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/greyscale?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">GreyScale</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/wasted?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Wasted</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/blurpe2?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Blurpe2</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/blurpe?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Blurpe</a>       
+         <li class="nav-item"> <a class="nav-link" href="api/edit/blur?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Blur</a>                       
+          <li class="nav-item"> <a class="nav-link" href="api/edit/sepia?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Sepia</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/blue?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Blue</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/red?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Red</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/passed?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Passed</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/invert?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Invert</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/jail?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Jail</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/comrade?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Comrade</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/edit/invertgreyscale?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">InvertGreyScale</a>          
+         <li class="nav-item"> <a class="nav-link" href="api/edit/lolice?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Lolice</a>          
+         <li class="nav-item"> <a class="nav-link" href="api/edit/horny?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Horny</a>          
+         <li class="nav-item"> <a class="nav-link" href="api/edit/ytfake?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&username=ConfuMods&comment=Subscribanse&apikey=ConfuMods">YTFake</a>          
+         <li class="nav-item"> <a class="nav-link" href="api/edit/pixelate?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Pixelate</a>          
+         <li class="nav-item"> <a class="nav-link" href="api/edit/simp?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&apikey=ConfuMods">Simp</a>          
+         <li class="nav-item"> <a class="nav-link" href="api/edit/its-so-stupid?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&username=Vos&apikey=ConfuMods">Stupid</a>          
+         <li class="nav-item"> <a class="nav-link" href="api/edit/twfake?imagen=https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg&username=Confu&username2=ConfuMods&comment=SoyPro&apikey=ConfuMods">TWFake</a> 
+          </ul>
+          </div>
+          </li>		                       
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-photooxy" aria-expanded="false" aria-controls="ui-photooxy">
+          <span class="menu-icon">
+          <i class="mdi mdi-folder-image"></i>
+          </span>
+          <span class="menu-title">Photooxy Offline</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-photooxy">
+          <ul class="nav flex-column sub-menu">         
+          <li class="nav-item"> <a class="nav-link" href="api/photooxy/grafity?text=ConfuMods&apikey=ConfuMods">Grafity</a>
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/naruto?text=ConfuMods&apikey=ConfuMods">Naruto</a>
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/capitan_america?text1=YouTube&text2=ConfuMods&apikey=ConfuMods">Capitan America</a>
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/shadow?text=ConfuMods&apikey=ConfuMods">Shadow</a>
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/text_on_cup?text=ConfuMods&apikey=ConfuMods">Taza</a>
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/coffe_cup?text=ConfuMods&apikey=ConfuMods">Taza2</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/love_message?text=ConfuMods&apikey=ConfuMods">Love</a>                                                
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/romantic_message?text=ConfuMods&apikey=ConfuMods">Love2</a>                                      
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/burn_papper?text=ConfuMods&apikey=ConfuMods">Papel</a>
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/under_grass?text=ConfuMods&apikey=ConfuMods">Bajo la hierba</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/text_tiktok?text1=YouTube&text2=ConfuMods&apikey=ConfuMods">TikTok</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/double_heart?text=ConfuMods&apikey=ConfuMods">Doble Heart</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/wood_heart?text=ConfuMods&apikey=ConfuMods">Corazon de Madera</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/flower_heart?text=ConfuMods&apikey=ConfuMods">Flor</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/flower_typography?text=ConfuMods&apikey=ConfuMods">Flor2</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/orchids_flower?text=ConfuMods&apikey=ConfuMods">Orquideas</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/wooden_board?text=ConfuMods&apikey=ConfuMods">Tabla de Madera</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/3d_summer?text=ConfuMods&apikey=ConfuMods">Verano 3D</a>
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/wolf_metal?text=ConfuMods&apikey=ConfuMods">Lobo Metalico</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/3d_nature?text=ConfuMods&apikey=ConfuMods">Naturaleza 3D</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/under_water?text=ConfuMods&apikey=ConfuMods">Bajo el Agua</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/golden_rose?text=ConfuMods&apikey=ConfuMods">Rosa de Oro</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/summer_nature?text=ConfuMods&apikey=ConfuMods">Naturaleza de Verano</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/typography?text=ConfuMods&apikey=ConfuMods">tipografía</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/under_fall?text=ConfuMods&apikey=ConfuMods">Under Fall</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/glowing_neon?text=ConfuMods&apikey=ConfuMods">Brillo Neon</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/rainbow_shine?text=ConfuMods&apikey=ConfuMods">Arcoiris</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/glow_rainbow?text=ConfuMods&apikey=ConfuMods">Arcoiris2</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/rainbow_3d?text=ConfuMods&apikey=ConfuMods">Arcoiris 3d</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/camouflage_fabric?text=ConfuMods&apikey=ConfuMods">Camuflaje</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/3d_glowing?text=ConfuMods&apikey=ConfuMods">Texto 3D</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/vintage_effect?text=ConfuMods&apikey=ConfuMods">Vintage</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/candy_text?text=ConfuMods&apikey=ConfuMods">Dulce</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/white_cube?text=ConfuMods&apikey=ConfuMods">Cubo Blaco</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/dark_metal?text=ConfuMods&apikey=ConfuMods">Metal Oscuro</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/party_neon?text=ConfuMods&apikey=ConfuMods">Fiesta Neon</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/petterns_effect?text=ConfuMods&apikey=ConfuMods">Efecto de Patrones</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/text_on_silk?text=ConfuMods&apikey=ConfuMods">Seda</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/sweet_candy?text=ConfuMods&apikey=ConfuMods">Dulce Caramelo</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/smoke_typography?text=ConfuMods&apikey=ConfuMods">Humo</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/woodblock_effect?text=ConfuMods&apikey=ConfuMods">Tallado en Madera</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/cemetery_gate?text=ConfuMods&apikey=ConfuMods">Puerta del Cementerio</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/luxury_royal?text=ConfuMods&apikey=ConfuMods">Texto de Lujo</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/coffe_cup2?text=ConfuMods&apikey=ConfuMods">Cafe</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/8bit_arcade?text=ConfuMods&apikey=ConfuMods">8 Bits</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/light_neon?text=ConfuMods&apikey=ConfuMods">Luz Neon</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/harry_potter?text=ConfuMods&apikey=ConfuMods">Harry Potter</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/modern_metal?text=ConfuMods&apikey=ConfuMods">Metal Moderno</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/wooden_3d?text=ConfuMods&apikey=ConfuMods">Madera 3D</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/butterfly?text=ConfuMods&apikey=ConfuMods">Mariposa</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/multi_material?text=ConfuMods&apikey=ConfuMods">Multi Material</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/matrix_effect?text=ConfuMods&apikey=ConfuMods">Matrix</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/watermelon_effect?text=ConfuMods&apikey=ConfuMods">Efecto Sandía</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/striking_3d?text=ConfuMods&apikey=ConfuMods">Fondo Naranja</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/metallic_glow?text=ConfuMods&apikey=ConfuMods">Resplandor Metalico</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/embroidery_effect?text=ConfuMods&apikey=ConfuMods">Efecto de Bordado</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/chrome_effect?text=ConfuMods&apikey=ConfuMods">Chrome</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/flaming_effect?text=ConfuMods&apikey=ConfuMods">Efecto Llameante</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/gradient_effect?text=ConfuMods&apikey=ConfuMods">Efecto Gradient</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/stars_effect?text=ConfuMods&apikey=ConfuMods">Estrellas</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/dota_effect?text=ConfuMods&apikey=ConfuMods">Dota</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/fur_effect?text=ConfuMods&apikey=ConfuMods">Efecto de Piel</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/birthday_cake?text=ConfuMods&apikey=ConfuMods">Pastel de Cumpleaños</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/cs_go_effect?text=ConfuMods&apikey=ConfuMods">Cs Go</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/overwatch_effect?text=ConfuMods&apikey=ConfuMods">OverWatch</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/warface_effect?text=ConfuMods&apikey=ConfuMods">Warface</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/crossfire?text=ConfuMods&apikey=ConfuMods">CrossFire</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/pubg_effect?text=ConfuMods&apikey=ConfuMods">Pubg</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/warface2?text=ConfuMods&apikey=ConfuMods">WarFace2</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/arena_of_valor?text=ConfuMods&apikey=ConfuMods">Arena Of Valor</a>     
+<li class="nav-item"> <a class="nav-link" href="api/photooxy/battlefield?text1=YouTube&text2=ConfuMods&apikey=ConfuMods">Battlefield</a>     
+          </ul>
+          </div>
+          </li>		
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-textpro" aria-expanded="false" aria-controls="ui-textpro">
+          <span class="menu-icon">
+          <i class="mdi mdi-folder-image"></i>
+          </span>
+          <span class="menu-title">TextPro Offline</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-textpro">
+          <ul class="nav flex-column sub-menu">   
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/bear?texto=ConfuMods&apikey=ConfuMods">Bear</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/bread?texto=ConfuMods&apikey=ConfuMods">Bread</a>          
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/blackpink?texto=ConfuMods&apikey=ConfuMods">BlackPink</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/3dchrome?texto=ConfuMods&apikey=ConfuMods">3DChrome</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/gemb?texto=ConfuMods&apikey=ConfuMods">Gemb</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/candy?texto=ConfuMods&apikey=ConfuMods">Candy</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/carbon?texto=ConfuMods&apikey=ConfuMods">Carbon</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/metale?texto=ConfuMods&apikey=ConfuMods">Metale</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/metalb?texto=ConfuMods&apikey=ConfuMods">Metalb</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/metalb2?texto=ConfuMods&apikey=ConfuMods">Metalb2</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/metalh?texto=ConfuMods&apikey=ConfuMods">Metalh</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glitter7?texto=ConfuMods&apikey=ConfuMods">Glitter7</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glitter6?texto=ConfuMods&apikey=ConfuMods">Glitter6</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glitter5?texto=ConfuMods&apikey=ConfuMods">Glitter5</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glitter4?texto=ConfuMods&apikey=ConfuMods">Glitter4</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glitter3?texto=ConfuMods&apikey=ConfuMods">Glitter3</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glitter2?texto=ConfuMods&apikey=ConfuMods">Glitter2</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glitter?texto=ConfuMods&apikey=ConfuMods">Glitter</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/golden?texto=ConfuMods&apikey=ConfuMods">Golden</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/jewelry?texto=ConfuMods&apikey=ConfuMods">Jewelry</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/equalizer?texto=ConfuMods&apikey=ConfuMods">Equalizer</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/magma?texto=ConfuMods&apikey=ConfuMods">Magma</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/gloss?texto=ConfuMods&apikey=ConfuMods">Gloss</a>                    
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glass?texto=ConfuMods&apikey=ConfuMods">Glass</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/glass2?texto=ConfuMods&apikey=ConfuMods">Glass2</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/neon_devil?texto=ConfuMods&apikey=ConfuMods">Neon Devil</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/joker?texto=ConfuMods&apikey=ConfuMods">Joker</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/fiction?texto=ConfuMods&apikey=ConfuMods">Fiction</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/demon?texto=ConfuMods&apikey=ConfuMods">Demon</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/toxic?texto=ConfuMods&apikey=ConfuMods">Toxic</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/broken?texto=ConfuMods&apikey=ConfuMods">Broken</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/skeleton?texto=ConfuMods&apikey=ConfuMods">Skeleton</a>
+          <li class="nav-item"> <a class="nav-link" href="api/textpro/minion?texto=ConfuMods&apikey=ConfuMods">Minion</a>
+          </ul>
+          </div>
+          </li>          
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-search" aria-expanded="false" aria-controls="ui-fun">
+          <span class="menu-icon">
+          <i class="mdi mdi-emoticon-happy"></i>
+          </span>
+          <span class="menu-title">Buscador</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-search">
+          <ul class="nav flex-column sub-menu">  
+          <li class="nav-item"> <a class="nav-link" href="/api/search/wallpaper?query=anime&apikey=ConfuMods">Wallpaper</a></li>              
+          <li class="nav-item"> <a class="nav-link" href="/api/search/wattpad?query=Boulevard&apikey=ConfuMods">Wattpad</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/wattpad-user?username=alexdigomas&apikey=ConfuMods">Usuario de Wattpad</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/sticker?query=anime&apikey=ConfuMods">Sticker</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/search/anime?query=naruto&apikey=ConfuMods">Anime</a></li>
+          </ul>
+          </div>
+          </li>    
+<li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-anime" aria-expanded="false" aria-controls="ui-anime">
+          <span class="menu-icon">
+          <i class="mdi mdi-cat"></i>
+          </span>
+          <span class="menu-title">Anime & Manga</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-anime">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/anime/wallpaper?&apikey=ConfuMods">Wallpaper</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/wallpaper2?&apikey=ConfuMods">Wallpaper2</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/random-anime?apikey=ConfuMods">Random Anime</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/samehadaku_genre?genre=sad&apikey=ConfuMods">Género</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/samehadaku_page?page=183&apikey=ConfuMods">Pagina</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/padoru?&apikey=ConfuMods">Padoru</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/waifu?&apikey=ConfuMods">Waifu</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/megumin?&apikey=ConfuMods">Megu</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/megumin2?&apikey=ConfuMods">Megu2</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/neko?&apikey=ConfuMods">Neko</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/awoo?&apikey=ConfuMods">Awoo</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/loli?&apikey=ConfuMods">Loli</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/loli2?&apikey=ConfuMods">Loli2</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/naruto?&apikey=ConfuMods">Naruto</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/sasuke?&apikey=ConfuMods">Sasuke</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/sakura?&apikey=ConfuMods">Sakura</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/hinata?&apikey=ConfuMods">Hinata</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/kanna?&apikey=ConfuMods">Kanna</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/todoroki-shoto?&apikey=ConfuMods">Shoto</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/rimuru?&apikey=ConfuMods">Rimuru</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/shion?&apikey=ConfuMods">Shion</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/shuna?&apikey=ConfuMods">Shuna</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/milim?&apikey=ConfuMods">Milim</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/souei?&apikey=ConfuMods">Souei</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/vanitas?&apikey=ConfuMods">Vanitas</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/jeanne?&apikey=ConfuMods">Jeanne</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/siesta?&apikey=ConfuMods">Siesta</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/anime/levi?&apikey=ConfuMods">Levi</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/akiyama?&apikey=ConfuMods">Akiyama</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/kobayakawa-anna?&apikey=ConfuMods">Anna</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/misaki-ayuzawa?&apikey=ConfuMods">Ayuzawa</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/boruto?&apikey=ConfuMods">Boruto</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/chitoge?&apikey=ConfuMods">Chitoge</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/deidara?&apikey=ConfuMods">Deidara</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/doraemon?&apikey=ConfuMods">Doraemon</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/elaina?&apikey=ConfuMods">Elaina</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/emilia?&apikey=ConfuMods">Emilia</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/erza?&apikey=ConfuMods">Erza</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/rias-gremory?&apikey=ConfuMods">Rias</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/hestia?&apikey=ConfuMods">Hestia</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/inori?&apikey=ConfuMods">Inori</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/isuzu?&apikey=ConfuMods">Isuzu</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/itachi?&apikey=ConfuMods">Itachi</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/kaga?&apikey=ConfuMods">Kaga</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/kagura?&apikey=ConfuMods">Kagura</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/kakashi?&apikey=ConfuMods">Kakashi</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/kaori?&apikey=ConfuMods">Kaori</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/kaneki?&apikey=ConfuMods">Kaneki</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/kotori?&apikey=ConfuMods">Kotori</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/kurumi-tokisaki?&apikey=ConfuMods">Kurumi</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/madara?&apikey=ConfuMods">Madara</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/mikasa-ackerman?&apikey=ConfuMods">Mikasa</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/miku?&apikey=ConfuMods">Miku</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/minato?&apikey=ConfuMods">Minato</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/onepiece?&apikey=ConfuMods">OnePiece</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/nezuko?&apikey=ConfuMods">Nezuko</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/pokemon?&apikey=ConfuMods">Pokemon</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/rize?&apikey=ConfuMods">Rize</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/sagiri?&apikey=ConfuMods">Sagiri</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/shina?&apikey=ConfuMods">Shina</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/shinka?&apikey=ConfuMods">Shinka</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/shota?&apikey=ConfuMods">Shota</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/shizuka?&apikey=ConfuMods">Shizuka</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/touka?&apikey=ConfuMods">Touka</a></li>
+<li class="nav-item"> <a class="nav-link" href="api/anime/tsunade?&apikey=ConfuMods">Tsunade</a></li>
+
+</ul>
+          </div>
+          </li>     
+          
+<li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-nsfw" aria-expanded="false" aria-controls="ui-tools">
+          <span class="menu-icon">
+          <i class="mdi mdi-wrench"></i>
+          </span>
+          <span class="menu-title">Anime +18</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-nsfw">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/ass?apikey=ConfuMods">Ass</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/ahegao?apikey=ConfuMods">Ahegao</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/bdsm?apikey=ConfuMods">Bdsm</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/blowjob?apikey=ConfuMods">Blowjob</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/cuckold?&apikey=ConfuMods">CuckOld</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/cum?apikey=ConfuMods">Cum</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/ero?apikey=ConfuMods">Ero</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/femdom?apikey=ConfuMods">Femdom</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/foot?apikey=ConfuMods">Foot</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/gangbang?apikey=ConfuMods">Gangbang</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/glasses?&apikey=ConfuMods">Glasses</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/hentai?apikey=ConfuMods">Hentai</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/hentaigif?apikey=ConfuMods">Hantai Gif</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/jahy?apikey=ConfuMods">Jahy</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/masturbation?apikey=ConfuMods">Masturbation</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/neko?apikey=ConfuMods">Neko</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/orgy?&apikey=ConfuMods">Orgy</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/panties?apikey=ConfuMods">Panties</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/pussy?apikey=ConfuMods">Pussy</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/thighs?apikey=ConfuMods">Thighs</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/yuri?&apikey=ConfuMods">Yuri</a></li>   
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/neko2?apikey=ConfuMods">Neko2</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/yuri2?apikey=ConfuMods">Yuri2</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/nsfw/yaoi?&apikey=ConfuMods">Yaoi</a></li>       
+          </ul>
+          </div>
+          </li>        
+          <li class="nav-item menu-items">
+          <a class="nav-link" data-toggle="collapse" href="#ui-oth" aria-expanded="false" aria-controls="ui-fun">
+          <span class="menu-icon">
+          <i class="mdi mdi-emoticon-happy"></i>
+          </span>
+          <span class="menu-title">Otros</span>
+          <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-oth">
+          <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/api/other/ghstalk?username=Confusion245&apikey=ConfuMods">Github</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/other/repostalk?username=Confusion245&apikey=ConfuMods">Repositorio</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/other/fakedata?country=china&apikey=ConfuMods">Datos Falsos</a></li>
+          <li class="nav-item"> <a class="nav-link" href="api/encode-decode/encode-64?text=ConfuMods&apikey=ConfuMods">Codificar Base-64</a>     
+          <li class="nav-item"> <a class="nav-link" href="api/encode-decode/decode-64?text=aGVsbG8gd29ybGQ=&apikey=ConfuMods">Decodificar Base-64</a>     
+          <li class="nav-item"> <a class="nav-link" href="api/encode-decode/encode-32?text=ConfuMods&apikey=ConfuMods">Codificar Base-32</a>     
+          <li class="nav-item"> <a class="nav-link" href="api/encode-decode/decode-32?text=INXW4ZTVJVXWI4Y=&apikey=ConfuMods">Decodificar Base-32</a>               
+          <li class="nav-item"> <a class="nav-link" href="/api/other/translate?kata=pagi&apikey=ConfuMods">Traducir</a></li>
+          <li class="nav-item"> <a class="nav-link" href="/api/other/simi?text=hola&apikey=ConfuMods">Simi</a></li> 
+         </ul>
+          </div>
+          </li>    
+          <li class="nav-item nav-category">
+          <span class="nav-link">Contactarme</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://github.com/Confusion245">
+              <span class="menu-icon">
+                <i class="mdi mdi-github-circle"></i>
+              </span>
+              <span class="menu-title">Github</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://wa.me/51923568749">
+              <span class="menu-icon">
+                <i class="mdi mdi-whatsapp"></i>
+              </span>
+              <span class="menu-title">WhatsApp</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://www.paypal.me/confusionmods">
+              <span class="menu-icon">
+                <i class="mdi mdi-paypal"></i>
+              </span>
+              <span class="menu-title">Donar</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="https://instagram.com/confumods">
+              <span class="menu-icon">
+                <i class="mdi mdi-instagram"></i>
+              </span>
+              <span class="menu-title">Instagram</span>
+            </a>
+          </li>
+        </ul>
+       </font>
+      </nav>
+      <div class="container-fluid page-body-wrapper">
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href="index.html"><big><i class="mdi mdi-biohazard text-primary"></i></big></a>
+          </div>
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <ul class="navbar-nav w-100">
+              <li class="nav-item w-100">
+                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex ">
+                  <input type="text" class="form-control" placeholder="Alcatraz APIs">
+                </form>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item nav-settings d-none d-lg-block">
+                <a class="nav-link" href="#">
+                  <i class="mdi mdi-view-grid"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown border-left">
+                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                  <i class="mdi mdi-bell"></i>
+                  <span class="count bg-danger"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                  <h6 class="p-3 mb-0">Nuevas actualizaciones</h6>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item">
+                    <div class="preview-thumbnail">
+                      <div class="preview-icon bg-dark rounded-circle">
+                        <i class="mdi mdi-calendar text-success"></i>
+                      </div>
+                    </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Subscribete</p>
+                      <p class="text-muted ellipsis mb-0">Aun no te as subscrito al canal?!</p>
+                    </div>
+                  </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                  <div class="navbar-profile">
+                    <img class="img-xs rounded-circle" src="https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg" alt="">
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">ConfuMods</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-danger text-uppercase">IP</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="ip">Espera...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success">
+                          <span class="mdi mdi-access-point-network icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Tu IP</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="font-weight-bold text-info text-uppercase">Tu Batería</h6>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                        	<span id="batteryLevel"></span>
+                          <h3 class="mb-0" id="percentageLevel">Espera...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-battery-positive"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Porcentaje de su batería</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-success text-uppercase">Visitantes</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h3 class="mb-0" id="visits">Espera...</h3>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-eye icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Alc-Api</font>
+                  </div>
+                </div>
+              </div>
+            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-info text-uppercase">Fecha</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h4 class="mb-0" id="tanggal">Espera...</h4>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-calendar icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Justo ahora</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="font-weight-bold text-success text-uppercase">Reloj</h5>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h4 class="mb-0" id="Clock">Espera...</h4>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-clock icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal" id="Ucapan">Ucapan</font>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="font-weight-bold text-info text-uppercase">Navidad</h6>
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                          <h5 class="mb-0" id="IdulAdha">Espera...</h5>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="icon icon-box-success ">
+                          <span class="mdi mdi-star icon-item"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <font face="Original Surfer" class="text-muted font-weight-normal">Cuenta regresiva</font>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="/api/game">
+              <div class="card card-round mt-5 stretch-card grid-margin">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h4 class="m-0 font-weight-bold text-warning"><i <h4>Ping Pong</h4>
+                </div>
+               <div class="card-body">
+                 <p class="status" style="font-size: 17px;"></p>
+                   <div class="form-group">
+                     <input class="form-control font-weight-bold text-center" type="text" placeholder="Introduce la Apikey." name="apikey" required>
+                   </div>
+                   <div class="form-group"><center>
+                     <button type="submit" class="btn btn-primary content-justify-center"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> <span class="font-weight-bold"> Jugar</span></button></center>
+                   </div>
+               </div>
+             </div>
+            </form>
+<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-5404310597803049" data-ad-slot="6657550061"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            <div class="row">
+              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="mt-3 btn btn-outline-danger bg-transparent">
+                    <div id="demo" class="alert btn btn-outline-danger" role="alert">
+                      <span id="Statistic">Espera...</span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+              <div class="card-body">
+              <img src="https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg" alt="ConfuMods" class="logo img-fluid rounded mx-auto d-block mb-4"/>
+              <h6 class="m-0 font-weight-bold text-primary">Informacion</h6>
+              <h6><br>
+              Esta ApiRest es gratis, utilícelo sabiamente. <br><br>Apikey? : <font color="red">ConfuMods</font>
+              <br> Si encuentra un error, informe <a href="https://wa.me/51923568749"> Owner</a></font>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <div class="bg-dark btn btn-block btn-outline-danger">
+                <font face="Original Surfer" class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © <span id="Years">00</span> ConfuMods</font>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      swal({
+        title: 'Bienvenido a Alc-Api',
+        text: 'Si hay un error, informe a ConfuMods',
+        imageUrl: 'https://i.ibb.co/zQ4wtHw/IMG-20211209-WA0025.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Danu',
+        animation: true
+      })
+    </script>
+			<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>   
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/ojan.js"></script>
+  </html>
